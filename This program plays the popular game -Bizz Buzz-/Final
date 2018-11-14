@@ -1,0 +1,40 @@
+// This program plays the popular game "Bizz Buzz"
+// with itself until it reaches 100 :)
+
+#include <stdio.h>
+#include <math.h>
+
+int main(void)
+
+{
+    int x = 0;
+
+    for(int i = 1; i <= 100; i++)
+    {
+        if((i%5) == 0)
+        {
+            x++;
+        }
+        if((i%7) == 0)
+        {
+            x+=2;
+        }
+        if(x == 0)
+        {
+            printf("%i\n", i);
+        }
+        if(x == 1)
+        {
+            printf("Bizz\n");
+        }
+        if(x == 2)
+        {
+            printf("Buzz\n");
+        }
+        if(x == 3)
+        {
+            printf("Bizz Buzz\n");
+        }
+        x = 0;
+    }
+}
